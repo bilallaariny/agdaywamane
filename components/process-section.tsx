@@ -16,7 +16,7 @@ export function ProcessSection() {
         language === "ar"
           ? "نستخدم طين حراري عالي الجودة من المغرب، طبيعي وبدون إضافات كيميائية"
           : "Argile réfractaire de haute qualité, sourcée localement au Maroc, naturelle et sans additifs chimiques",
-      duration: "1 jour",
+      duration:language  === "ar" ? " يوم واحد" : "1 jour",
       image: "/1-material-selection.JPG" // Added leading slash for public folder
     },
     {
@@ -26,7 +26,7 @@ export function ProcessSection() {
         language === "ar"
           ? "تشكيل يدوي على عجلة الفخار لضمان التوزيع المتجانس للحرارة"
           : "Façonnage à la main sur tour de potier pour une répartition uniforme de la chaleur",
-      duration: "30-45 min",
+      duration:language  === "ar" ?  " 30-45 دقيقة" :"30-45 min",
       image: "/2-shaping.JPG"
     },
     {
@@ -36,7 +36,7 @@ export function ProcessSection() {
         language === "ar"
           ? "رسم الزخارف البربرية بأصباغ طبيعية من أكاسيد معدنية"
           : "Peinture des motifs berbères avec des pigments naturels à base d'oxydes minéraux",
-      duration: "2 heures",
+      duration:language  === "ar" ? "ساعتين": "2 heures",
       image: "/3-decoration.JPG"
     },
     {
@@ -46,7 +46,7 @@ export function ProcessSection() {
         language === "ar"
           ? "حرق في فرن خشبي تقليدي على درجة 30-40°م لمدة 8-12 ساعة"
           : "Cuisson dans un four à bois traditionnel à 30-40°C pendant 8-12 heures",
-      duration: "8-12 heures",
+      duration:language  === "ar" ?"8-12 ساعات": "8-12 heures",
       image: "/4-firing.JPG"
     },
   ]
