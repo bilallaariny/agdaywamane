@@ -3,51 +3,53 @@
 import { useLanguage } from "./language-provider"
 import { AnimatedSection } from "./animated-section"
 import { Button } from "./ui/button"
-import { ArrowRight, ArrowLeft } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 
 export function HeroSection() {
   const { language, t } = useLanguage()
 
   return (
-    <section id="home" className="min-h-screen flex items-center pt-20 moroccan-pattern">
-      <div className="container mx-auto px-16 max-w-6xl">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
-          <div className="space-y-8">
-            <AnimatedSection animation="fade-right" delay={200}>
-              <h1 className="text-5xl lg:text-7xl font-bold text-[#202827] leading-tight">{t("hero.title")}</h1>
-            </AnimatedSection>
-
-            <AnimatedSection animation="fade-right" delay={400}>
-              <p className="text-xl text-[#8B7355] font-medium">{t("hero.subtitle")}</p>
-            </AnimatedSection>
-
-            <AnimatedSection animation="fade-right" delay={600}>
-              <p className="text-lg text-gray-600 leading-relaxed max-w-lg">{t("hero.description")}</p>
-            </AnimatedSection>
-
-          </div>
-
-          {/* Hero Image */}
-          <AnimatedSection animation="fade-left" delay={400} className="relative">
-            <div className="relative">
-              {/* Floating decorative elements */}
-              <div className="absolute -top-10 -left-10 w-20 h-20 bg-[#E6DFD9] geometric-shape animate-float"></div>
-              <div className="absolute -bottom-10 -right-10 w-16 h-16 bg-[#8B7355] rounded-full animate-float animate-delay-400"></div>
-
-              {/* Main image container */}
-              <div className="relative bg-gradient-to-br from-[#E6DFD9] to-[#202827] p-8 rounded-3xl shadow-2xl">
-                <img
-                  src="/IMG_2400.JPG"
-                  alt="Tajine artisanal marocain"
-                  className="w-full h-auto rounded-2xl shadow-lg"
-                />
-
-                {/* Overlay pattern */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#202827]/20 to-transparent rounded-3xl"></div>
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url(/single-tajine-background.jpg)` }}
+    >
+      <div className="absolute inset-0 bg-gradient-to-b from-[#202827]/60 to-[#E6DFD9]/40"></div>
+      <div className="container mx-auto px-6 max-w-4xl relative z-10">
+        <div className="text-center space-y-12 py-24">
+          {/* Decorative Divider */}
+          <AnimatedSection animation="fade-down" delay={200}>
+            <div className="flex justify-center">
+              <div className="w-40 h-1 bg-[#8B7355] rounded-full mb-6 relative">
+                <div className="absolute -top-6 left-1/4 transform -translate-x-1/2 w-10 h-10 bg-[#E6DFD9]/80 rounded-full animate-float-slow"></div>
+                <div className="absolute -top-6 right-1/4 transform translate-x-1/2 w-8 h-8 bg-[#202827]/50 geometric-shape animate-float-slow animate-delay-400"></div>
               </div>
             </div>
           </AnimatedSection>
+
+          {/* Title */}
+          <AnimatedSection animation="fade-up" delay={400}>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-[#202827] leading-tight tracking-tight drop-shadow-lg">
+              {t("hero.title")}
+            </h1>
+          </AnimatedSection>
+
+          {/* Subtitle */}
+          <AnimatedSection animation="fade-up" delay={600}>
+            <p className="text-2xl md:text-3xl text-[#8B7355] font-semibold italic drop-shadow-md">
+              {t("hero.subtitle")}
+            </p>
+          </AnimatedSection>
+
+          {/* Description */}
+          <AnimatedSection animation="fade-up" delay={800}>
+            <p className="text-lg md:text-xl text-gray-100 font-light leading-relaxed max-w-xl mx-auto drop-shadow-sm">
+              {t("hero.description")}
+            </p>
+          </AnimatedSection>
+
+          {/* Call to Action */}
+         
         </div>
       </div>
     </section>

@@ -36,7 +36,7 @@ export function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-[#8B7355]" />
-                <span>{language === "ar" ? "باريس، فرنسا" : "Paris, France"}</span>
+                <span>{language === "ar" ? "المغرب,شيشاوة" : "Chichaoua, Maroc"}</span>
               </div>
             </div>
           </div>
