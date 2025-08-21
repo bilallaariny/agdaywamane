@@ -11,10 +11,18 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(/single-tajine-background.jpg)` }}
+      className="relative min-h-screen w-full flex items-center justify-center overflow-hidden"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-[#202827]/60 to-[#E6DFD9]/40"></div>
+      {/* Background Image Container - Covers full width and height */}
+      <div 
+        className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat z-0"
+        style={{ backgroundImage: `url(/IMG_2402.JPG)` }}
+      >
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#202827]/60 to-[#E6DFD9]/40"></div>
+      </div>
+
+      {/* Content Container */}
       <div className="container mx-auto px-6 max-w-4xl relative z-10">
         <div className="text-center space-y-12 py-24">
           {/* Decorative Divider */}
@@ -36,7 +44,7 @@ export function HeroSection() {
 
           {/* Subtitle */}
           <AnimatedSection animation="fade-up" delay={600}>
-            <p className="text-2xl md:text-3xl text-[#8B7355] font-semibold italic drop-shadow-md">
+            <p className="text-2xl md:text-3xl text-[#202827] font-semibold italic drop-shadow-md">
               {t("hero.subtitle")}
             </p>
           </AnimatedSection>
@@ -49,7 +57,7 @@ export function HeroSection() {
           </AnimatedSection>
 
           {/* Call to Action */}
-         
+        
         </div>
       </div>
     </section>
